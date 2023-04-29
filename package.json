@@ -1,0 +1,40 @@
+{
+  "name": "ytdlspot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "convert": "babel src -d lib",
+    "start": "node src/index.js",
+    "build": "npm run convert && pkg ."
+  },
+  "bin": {
+    "main": "./lib/index.js"
+  },
+  "pkg": {
+    "scripts": "start",
+    "assets": [
+      "**/*.js"
+    ],
+    "targets": [
+      "node18-win-x64",
+      "node18-macos-x64",
+      "node18-linux-x64"
+    ],
+    "outputPath": "dist"
+  },
+  "author": "ttrreevvoorr",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "isomorphic-unfetch": "^4.0.2",
+    "spotify-uri": "^3.0.3",
+    "spotify-url-info": "^3.2.3",
+    "ytdl": "^1.4.1",
+    "ytsr": "^3.8.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.21.5",
+    "babel-cli": "^6.26.0"
+  }
+}
