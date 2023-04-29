@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 });
 
 const isWin = process.platform === "win32";
-const dir = isWin ? ".\\downloads" : "./downloads";
+let dir = isWin ? ".\\downloads" : "./downloads";
 
 const logo = `
 \`YMM'   \`MM'MMP""MM""YMM \`7MM"""Yb. \`7MMF'           .M"""bgd \`7MM"""Mq.   .g8""8q.  MMP""MM""YMM 
