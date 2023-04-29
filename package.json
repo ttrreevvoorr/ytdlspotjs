@@ -1,12 +1,12 @@
 {
   "name": "ytdlspot",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Download songs from YouTube based on tracks found in a Spotify URL",
   "main": "main.js",
   "scripts": {
     "convert": "babel src -d lib",
     "start": "node src/index.js",
-    "build": "npm run convert && pkg ."
+    "build": "npm run convert && pkg . --no-bytecode --public-packages \"*\" --public"
   },
   "bin": {
     "main": "./lib/index.js"
